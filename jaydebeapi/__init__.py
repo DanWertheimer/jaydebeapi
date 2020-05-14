@@ -160,7 +160,7 @@ def _handle_sql_exception_jpype():
 def _jdbc_connect_jpype(jclassname, url, driver_args, jars, libs):
     import jpype
     if not jpype.isJVMStarted():
-        args = []
+        args = ['-Djavax.net.ssl.trustStore=~/Documents/Absa/Work/innovation_day/denodo/utils/AUSL-PROD.jks']
         class_path = []
         if jars:
             class_path.extend(jars)
